@@ -29,11 +29,9 @@ const toggleDrum = (drumArrayName, index) => {
   drums[index] = !drums[index];
 };
 
-const clear = () => {
+const clear = (drumArrayName) => {
   const drums = getDrumArrayByName(drumArrayName);
-  
-};
-
-const invert = () => {
-
+  if (drums) {
+    drums.fill(false);
+  }
 };

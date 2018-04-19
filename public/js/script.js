@@ -1,9 +1,39 @@
-// Drum Arrays
-let kicks = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
-let snares = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
-let hiHats = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
-let rideCymbals = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
+const createEmptyDrumArray = () => new Array(16).fill(false);
 
-const toggleDrum = (array, number) => {
+// Drum Arrays
+let kicks = createEmptyDrumArray();
+let snares = createEmptyDrumArray();
+let hiHats = createEmptyDrumArray();
+let rideCymbals = createEmptyDrumArray();
+
+const getDrumArrayByName = (name) => {
+  switch (name) {
+    case 'kicks':
+      return kicks;
+    case 'snares':
+      return snares;
+    case 'hiHats':
+      return hiHats;
+    case 'rideCymbals':
+      return rideCymbals;
+    default:
+      return;
+  }
+};
+
+const toggleDrum = (drumArrayName, index) => {
+  const drums = getDrumArrayByName(drumArrayName);
+  if (!drums || index > 15 || index < 0) {
+    return;
+  }
+  drums[index] = !drums[index];
+};
+
+const clear = () => {
+  const drums = getDrumArrayByName(drumArrayName);
+  
+};
+
+const invert = () => {
 
 };

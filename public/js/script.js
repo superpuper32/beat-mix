@@ -35,3 +35,14 @@ const clear = (drumArrayName) => {
     drums.fill(false);
   }
 };
+
+
+const invert = (drumArrayName) => {
+  const drums = getDrumArrayByName(drumArrayName);
+  if (!drums) {
+    return;
+  }
+for (let i = 0; i < drums.length; i++) {
+  drums[i] = !drums[i];
+}
+};

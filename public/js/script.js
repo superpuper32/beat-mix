@@ -36,7 +36,6 @@ const clear = (drumArrayName) => {
   }
 };
 
-
 const invert = (drumArrayName) => {
   const drums = getDrumArrayByName(drumArrayName);
   if (!drums) {

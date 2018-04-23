@@ -24,7 +24,14 @@ const presetHandler = (method, index, newPresetArray) => {
       return [404];
     }
   } else if (method === 'PUT') {
-
+    const newPreset = createOrUpdatePreset(index, newPresetArray);
+    if (newPreset) {
+      return [200, newPreset];
+    } else {
+      return [404];
+    }
+  } else {
+    return [400];
   }
 };
 

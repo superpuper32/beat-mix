@@ -45,3 +45,7 @@ for (let i = 0; i < drums.length; i++) {
   drums[i] = !drums[i];
 }
 };
+
+const getNeighborPads = (x, y, size) => {
+  
+};
